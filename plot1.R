@@ -1,5 +1,0 @@
-dat <- read.table("household_power_consumption.txt",  sep=";") 
-data <- rbind(dat[grep(as.Date("1/2/2007",format = '%d/%m/%Y'),as.Date(dat[,1], format = '%d/%m/%Y')),],dat[grep(as.Date("2/2/2007",format = '%d/%m/%Y'),as.Date(dat[,1], format = '%d/%m/%Y')),])
-hist(as.numeric(as.character(data[,3])), col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
-dev.copy(png, file = "plot1.png")
-dev.off()
